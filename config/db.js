@@ -24,6 +24,7 @@
 //     connectToMongodb,
 //     getDb
 // }
+//  mongod --dbpath /usr/local/var/mongodb
 const mongoose = require("mongoose");
 
 const connectToMongodb = async() => {

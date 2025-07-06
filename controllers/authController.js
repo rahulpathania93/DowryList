@@ -92,8 +92,22 @@ const login = async(req, res) => {
     }
 
 }
+const getProfile = async(req, res) => {
+    try {
+        console.log("hello-==-=-==-=-==-", req.user.userId);
+        const userId = req.user.userId;
+        console.log("hello-==-=-==-=-==-", userId);
+        const data = await User.findById(userId);
+        console.log("data", data)
+        return res.status(201).json({ message: "User Found" })
 
+    } catch (err) {
+        console.log("err", err)
+    }
+
+}
 module.exports = {
     registerUser,
-    login
+    login,
+    getProfile
 }
