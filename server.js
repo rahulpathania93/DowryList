@@ -7,8 +7,10 @@ require("dotenv").config();
 const app = express()
 app.use(express.json());
 const authRoutes = require("./routes/auth")
+const dowryItemRoutes = require("./routes/dowry")
 console.log("hell2o")
 app.use("/api", authRoutes);
+app.use("/api", dowryItemRoutes);
 connectToMongodb().then(() => {
     console.log("here in s")
     app.get("/", (req, res) => {
