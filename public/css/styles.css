@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background: rgba(249, 79, 79, 0.60); */
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("/images/dowrylist.jpg");
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* The card box that holds the login form*/
+
+.login-box {
+    background: #FAFAFA;
+    padding: 30px 40px;
+    border-radius: 60px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 330px;
+    border-color: black
+}
+
+.login-box:hover {
+    background: #E67676;
+    border-color: black
+}
+
+
+/*Heading inside the login box */
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #252424;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+
+/* 
+Wrapper class for each label + input field
+Keeps spacing consistent
+*/
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+/* 
+Labels above input fields (like Email, Password)
+*/
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #252424;
+}
+
+
+/* 
+Input fields for email and password
+*/
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #6366f1;
+    /* Purple border when active */
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+    /* Soft purple glow to guide user */
+}
+
+
+/* 
+Login button
+*/
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px
+}
+
+
+/* 
+Change color when hovering on button
+*/
+
+button[type="submit"]:hover {
+    background-color: #E54683;
+    /* Slightly darker purple */
+}
+
+.register-link {
+    text-align: centre;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-left: 150px
+}
+
+.error {
+    text-align: center;
+    color: red;
+    margin-top: 8px
+}

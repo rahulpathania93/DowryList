@@ -11,6 +11,13 @@ const dowryItemRoutes = require("./routes/dowry")
 console.log("hell2o")
 app.use("/api", authRoutes);
 app.use("/api", dowryItemRoutes);
+app.use(express.static("public"));
+const path = require("path");
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "login.html"));
+});
+
 connectToMongodb().then(() => {
     console.log("here in s")
     app.get("/", (req, res) => {
